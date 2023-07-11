@@ -58,9 +58,8 @@ function App() {
     }
     else
     {
-      setAllData(alldata => [...alldata,val]);
+      setAllData([...alldata,val]);
     }
-
     e.target.rno.value = '';
     e.target.name.value = '';
     e.target.sub1.value = '';
@@ -68,15 +67,13 @@ function App() {
     e.target.sub3.value = '';
     e.target.sub4.value = '';
     e.target.sub5.value = '';
-    
   }
 
   const handleDelete = (k) => {
-
     const newArray = alldata.filter((t,i) => i !== k);
     setAllData(newArray);
-
   }
+
   const handleEdit = (k) => {
       setEditid(k);
       setIsedit(true);
